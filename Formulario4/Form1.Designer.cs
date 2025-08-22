@@ -32,6 +32,9 @@
             LHasta = new Label();
             tDesde = new TextBox();
             tHasta = new TextBox();
+            bGenFucion = new Button();
+            lListaNros = new Label();
+            lbxListNros = new ListBox();
             SuspendLayout();
             // 
             // LDesde
@@ -66,11 +69,42 @@
             tHasta.Size = new Size(100, 23);
             tHasta.TabIndex = 3;
             // 
+            // bGenFucion
+            // 
+            bGenFucion.Location = new Point(101, 156);
+            bGenFucion.Name = "bGenFucion";
+            bGenFucion.Size = new Size(99, 23);
+            bGenFucion.TabIndex = 4;
+            bGenFucion.Text = "Genere Fución";
+            bGenFucion.UseVisualStyleBackColor = true;
+            bGenFucion.Click += bGenFucion_Click;
+            // 
+            // lListaNros
+            // 
+            lListaNros.AutoSize = true;
+            lListaNros.Location = new Point(370, 35);
+            lListaNros.Name = "lListaNros";
+            lListaNros.Size = new Size(99, 15);
+            lListaNros.TabIndex = 5;
+            lListaNros.Text = "Lista de Números";
+            // 
+            // lbxListNros
+            // 
+            lbxListNros.FormattingEnabled = true;
+            lbxListNros.ItemHeight = 15;
+            lbxListNros.Location = new Point(320, 57);
+            lbxListNros.Name = "lbxListNros";
+            lbxListNros.Size = new Size(216, 154);
+            lbxListNros.TabIndex = 6;
+            // 
             // Formulario4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lbxListNros);
+            Controls.Add(lListaNros);
+            Controls.Add(bGenFucion);
             Controls.Add(tHasta);
             Controls.Add(tDesde);
             Controls.Add(LHasta);
@@ -87,5 +121,8 @@
         private Label LHasta;
         private TextBox tDesde;
         private TextBox tHasta;
+        private Button bGenFucion;
+        private Label lListaNros;
+        private ListBox lbxListNros;
     }
 }
