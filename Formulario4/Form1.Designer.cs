@@ -35,12 +35,17 @@
             bGenFucion = new Button();
             lListaNros = new Label();
             lbxListNros = new ListBox();
+            bPar = new Button();
+            bImpar = new Button();
+            bPrimos = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // LDesde
             // 
             LDesde.AutoSize = true;
-            LDesde.Location = new Point(67, 57);
+            LDesde.Location = new Point(21, 86);
             LDesde.Name = "LDesde";
             LDesde.Size = new Size(39, 15);
             LDesde.TabIndex = 0;
@@ -49,7 +54,7 @@
             // LHasta
             // 
             LHasta.AutoSize = true;
-            LHasta.Location = new Point(67, 110);
+            LHasta.Location = new Point(21, 124);
             LHasta.Name = "LHasta";
             LHasta.Size = new Size(37, 15);
             LHasta.TabIndex = 1;
@@ -57,21 +62,21 @@
             // 
             // tDesde
             // 
-            tDesde.Location = new Point(124, 54);
+            tDesde.Location = new Point(79, 83);
             tDesde.Name = "tDesde";
             tDesde.Size = new Size(100, 23);
             tDesde.TabIndex = 2;
             // 
             // tHasta
             // 
-            tHasta.Location = new Point(124, 107);
+            tHasta.Location = new Point(79, 121);
             tHasta.Name = "tHasta";
             tHasta.Size = new Size(100, 23);
             tHasta.TabIndex = 3;
             // 
             // bGenFucion
             // 
-            bGenFucion.Location = new Point(101, 156);
+            bGenFucion.Location = new Point(42, 167);
             bGenFucion.Name = "bGenFucion";
             bGenFucion.Size = new Size(99, 23);
             bGenFucion.TabIndex = 4;
@@ -82,37 +87,84 @@
             // lListaNros
             // 
             lListaNros.AutoSize = true;
-            lListaNros.Location = new Point(370, 35);
+            lListaNros.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lListaNros.Location = new Point(123, 31);
             lListaNros.Name = "lListaNros";
-            lListaNros.Size = new Size(99, 15);
+            lListaNros.Size = new Size(166, 25);
             lListaNros.TabIndex = 5;
             lListaNros.Text = "Lista de Números";
+            lListaNros.Click += lListaNros_Click;
             // 
             // lbxListNros
             // 
             lbxListNros.FormattingEnabled = true;
             lbxListNros.ItemHeight = 15;
-            lbxListNros.Location = new Point(320, 57);
+            lbxListNros.Location = new Point(243, 83);
             lbxListNros.Name = "lbxListNros";
-            lbxListNros.Size = new Size(216, 154);
+            lbxListNros.Size = new Size(148, 199);
             lbxListNros.TabIndex = 6;
+            lbxListNros.SelectedIndexChanged += lbxListNros_SelectedIndexChanged;
+            // 
+            // bPar
+            // 
+            bPar.Location = new Point(52, 208);
+            bPar.Name = "bPar";
+            bPar.Size = new Size(75, 23);
+            bPar.TabIndex = 7;
+            bPar.Text = "Pares";
+            bPar.UseVisualStyleBackColor = true;
+            bPar.Click += bPar_Click;
+            // 
+            // bImpar
+            // 
+            bImpar.Location = new Point(52, 249);
+            bImpar.Name = "bImpar";
+            bImpar.Size = new Size(75, 23);
+            bImpar.TabIndex = 8;
+            bImpar.Text = "Impares";
+            bImpar.UseVisualStyleBackColor = true;
+            bImpar.Click += bImpar_Click;
+            // 
+            // bPrimos
+            // 
+            bPrimos.Location = new Point(52, 290);
+            bPrimos.Name = "bPrimos";
+            bPrimos.Size = new Size(75, 23);
+            bPrimos.TabIndex = 9;
+            bPrimos.Text = "Primos";
+            bPrimos.UseVisualStyleBackColor = true;
+            bPrimos.Click += bPrimos_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.Controls.Add(lListaNros);
+            panel1.Controls.Add(bPrimos);
+            panel1.Controls.Add(lbxListNros);
+            panel1.Controls.Add(bImpar);
+            panel1.Controls.Add(tDesde);
+            panel1.Controls.Add(bPar);
+            panel1.Controls.Add(LDesde);
+            panel1.Controls.Add(bGenFucion);
+            panel1.Controls.Add(LHasta);
+            panel1.Controls.Add(tHasta);
+            panel1.Location = new Point(31, 32);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(448, 356);
+            panel1.TabIndex = 10;
             // 
             // Formulario4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(lbxListNros);
-            Controls.Add(lListaNros);
-            Controls.Add(bGenFucion);
-            Controls.Add(tHasta);
-            Controls.Add(tDesde);
-            Controls.Add(LHasta);
-            Controls.Add(LDesde);
+            Controls.Add(panel1);
             Name = "Formulario4";
             Text = "Formulario4";
+            Load += Formulario4_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -124,5 +176,9 @@
         private Button bGenFucion;
         private Label lListaNros;
         private ListBox lbxListNros;
+        private Button bPar;
+        private Button bImpar;
+        private Button bPrimos;
+        private Panel panel1;
     }
 }
